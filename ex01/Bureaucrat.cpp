@@ -6,7 +6,7 @@
 /*   By: mabou-ha <mabou-ha>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 19:56:36 by mabou-ha          #+#    #+#             */
-/*   Updated: 2025/10/23 23:57:56 by mabou-ha         ###   ########.fr       */
+/*   Updated: 2025/10/24 00:04:19 by mabou-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,19 @@ void Bureaucrat::decrementGrade()
 	if (grade_ >= 150)
 		throw GradeTooLowException();
 	++grade_;
+}
+
+void Bureaucrat::signForm(Form& form) const
+{
+	try {
+		form.beSigned(*this);
+		std::cout << name_ << " signed " << form.getName() << std::endl;
+	}
+	catch (std::exception& e)
+	{
+		std::cout << name_ << " couldn’t sign " << form.getName()
+				<< " because " << e.what() << std::endl;
+	}
 }
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& b)
