@@ -6,7 +6,7 @@
 /*   By: mabou-ha <mabou-ha>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 19:05:49 by mabou-ha          #+#    #+#             */
-/*   Updated: 2025/10/24 23:14:51 by mabou-ha         ###   ########.fr       */
+/*   Updated: 2025/11/03 23:15:45 by mabou-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class PresidentialPardonForm : public AForm
 	private:
 		std::string target_;
 	public:
-		explicit PresidentialPardonForm(const std::string& target);
+		PresidentialPardonForm(const std::string& target);
 		PresidentialPardonForm(const PresidentialPardonForm& obj);
 		PresidentialPardonForm& operator=(const PresidentialPardonForm& obj);
 		~PresidentialPardonForm();
