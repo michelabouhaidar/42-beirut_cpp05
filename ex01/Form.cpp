@@ -6,7 +6,7 @@
 /*   By: mabou-ha <mabou-ha>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 21:37:03 by mabou-ha          #+#    #+#             */
-/*   Updated: 2025/10/24 00:00:52 by mabou-ha         ###   ########.fr       */
+/*   Updated: 2025/11/03 23:05:38 by mabou-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ Form::~Form()
 	std::cout << "Form " << name_ << " destructor called" << std::endl;
 }
 
-const std::string Form::getName() const
+const std::string& Form::getName() const
 {
 	return name_;
 }

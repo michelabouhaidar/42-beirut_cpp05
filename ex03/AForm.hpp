@@ -6,7 +6,7 @@
 /*   By: mabou-ha <mabou-ha>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 21:37:06 by mabou-ha          #+#    #+#             */
-/*   Updated: 2025/10/24 23:19:49 by mabou-ha         ###   ########.fr       */
+/*   Updated: 2025/11/03 23:06:40 by mabou-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 #include <string>
 #include <iostream>
-#include "Bureaucrat.hpp"
 
 class Bureaucrat;
 
@@ -31,7 +30,7 @@ class AForm
 		AForm(const AForm& obj);
 		AForm& operator=(const AForm& obj);
 		virtual ~AForm();
-		const std::string getName() const;
+		const std::string& getName() const;
 		int getSignGrade() const;
 		int getExecuteGrade() const;
 		bool isSigned() const;

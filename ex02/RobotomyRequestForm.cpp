@@ -6,7 +6,7 @@
 /*   By: mabou-ha <mabou-ha>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 20:46:49 by mabou-ha          #+#    #+#             */
-/*   Updated: 2025/10/24 23:50:37 by mabou-ha         ###   ########.fr       */
+/*   Updated: 2025/11/03 23:03:24 by mabou-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <cstdlib>
 
 RobotomyRequestForm::RobotomyRequestForm(const std::string& target)
-: AForm("RobotomyRequestForm", 72, 75), target_(target)
+: AForm("RobotomyRequestForm", 72, 45), target_(target)
 {
 	std::cout << "RobotomyRequestForm " << target_ << " target constructor called" << std::endl;
 }

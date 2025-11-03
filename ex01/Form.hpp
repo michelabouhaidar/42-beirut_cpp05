@@ -6,7 +6,7 @@
 /*   By: mabou-ha <mabou-ha>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 21:37:06 by mabou-ha          #+#    #+#             */
-/*   Updated: 2025/10/24 00:06:33 by mabou-ha         ###   ########.fr       */
+/*   Updated: 2025/11/03 23:05:43 by mabou-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class Form
 		Form(const Form& obj);
 		Form& operator=(const Form& obj);
 		~Form();
-		const std::string getName() const;
+		const std::string& getName() const;
 		int getSignGrade() const;
 		int getExecuteGrade() const;
 		bool isSigned() const;

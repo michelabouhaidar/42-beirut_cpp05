@@ -6,7 +6,7 @@
 /*   By: mabou-ha <mabou-ha>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 19:05:44 by mabou-ha          #+#    #+#             */
-/*   Updated: 2025/10/24 23:31:48 by mabou-ha         ###   ########.fr       */
+/*   Updated: 2025/11/03 23:09:55 by mabou-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,10 @@ PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& obj
 PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPardonForm& obj)
 {
 	if (this != &obj)
+	{
+		AForm::operator=(obj);
 		this->target_ = obj.target_;
+	}
 	std::cout << "PresidentialPardonForm " << target_ << " target copy assignent operator called" << std::endl;
 	return *this;
 }
@@ -41,5 +44,5 @@ PresidentialPardonForm::~PresidentialPardonForm()
 void PresidentialPardonForm::execute(Bureaucrat const& executor) const
 {
 	checkExecutable(executor);
-	std::cout << target_ << "has been pardoned by the President." << std::endl;
+	std::cout << target_ << " has been pardoned by the President." << std::endl;
 }

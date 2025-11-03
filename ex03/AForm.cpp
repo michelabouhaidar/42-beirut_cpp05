@@ -6,21 +6,22 @@
 /*   By: mabou-ha <mabou-ha>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 21:37:03 by mabou-ha          #+#    #+#             */
-/*   Updated: 2025/10/24 23:18:46 by mabou-ha         ###   ########.fr       */
+/*   Updated: 2025/11/03 23:07:03 by mabou-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AForm.hpp"
 #include <iostream>
+#include "Bureaucrat.hpp"
 
 AForm::AForm(const std::string& name, int signGrade, int executeGrade)
 : name_(name), isSigned_(false), signGrade_(signGrade), executeGrade_(executeGrade)
 {
 	std::cout << "AForm " << name_ << " name constructor called" << std::endl;
 	if (signGrade_ < 1 || executeGrade_ < 1)
-		throw Bureaucrat::GradeTooHighException();
+		throw GradeTooHighException();
 	if (signGrade_ > 150 || executeGrade_ > 150)
-		throw Bureaucrat::GradeTooLowException();
+		throw GradeTooLowException();
 }
 
 AForm::AForm(const AForm& obj)
@@ -42,7 +43,7 @@ AForm::~AForm()
 	std::cout << "AForm " << name_ << " destructor called" << std::endl;
 }
 
-const std::string AForm::getName() const
+const std::string& AForm::getName() const
 {
 	return name_;
 }

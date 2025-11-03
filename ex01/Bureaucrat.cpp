@@ -6,7 +6,7 @@
 /*   By: mabou-ha <mabou-ha>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 19:56:36 by mabou-ha          #+#    #+#             */
-/*   Updated: 2025/10/24 00:04:19 by mabou-ha         ###   ########.fr       */
+/*   Updated: 2025/11/03 23:05:23 by mabou-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ Bureaucrat::~Bureaucrat()
 	std::cout << "Bureaucrat " << name_ << " destructor called" << std::endl;
 }
 
-const std::string Bureaucrat::getName() const
+const std::string& Bureaucrat::getName() const
 {
 	return name_;
 }

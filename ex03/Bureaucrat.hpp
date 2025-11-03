@@ -6,7 +6,7 @@
 /*   By: mabou-ha <mabou-ha>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 13:17:29 by mabou-ha          #+#    #+#             */
-/*   Updated: 2025/10/24 23:38:39 by mabou-ha         ###   ########.fr       */
+/*   Updated: 2025/11/03 23:06:53 by mabou-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 #include <string>
 #include <iostream>
 #include <exception>
-#include "AForm.hpp"
 
 class AForm;
 
@@ -29,7 +28,7 @@ class Bureaucrat
 		Bureaucrat(const Bureaucrat& obj);
 		Bureaucrat& operator=(const Bureaucrat& obj);
 		~Bureaucrat();
-		const std::string getName() const;
+		const std::string& getName() const;
 		int getGrade() const;
 		void incrementGrade();
 		void decrementGrade();

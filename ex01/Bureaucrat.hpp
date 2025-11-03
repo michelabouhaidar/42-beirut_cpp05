@@ -6,7 +6,7 @@
 /*   By: mabou-ha <mabou-ha>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 13:17:29 by mabou-ha          #+#    #+#             */
-/*   Updated: 2025/10/24 00:06:20 by mabou-ha         ###   ########.fr       */
+/*   Updated: 2025/11/03 23:05:28 by mabou-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class Bureaucrat
 		Bureaucrat(const Bureaucrat& obj);
 		Bureaucrat& operator=(const Bureaucrat& obj);
 		~Bureaucrat();
-		const std::string getName() const;
+		const std::string& getName() const;
 		int getGrade() const;
 		void incrementGrade();
 		void decrementGrade();

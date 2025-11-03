@@ -6,12 +6,13 @@
 /*   By: mabou-ha <mabou-ha>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 19:56:36 by mabou-ha          #+#    #+#             */
-/*   Updated: 2025/10/24 23:48:16 by mabou-ha         ###   ########.fr       */
+/*   Updated: 2025/11/03 23:07:32 by mabou-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include <iostream>
+#include "AForm.hpp"
 
 Bureaucrat::Bureaucrat(const std::string& name, int grade) : name_(name), grade_(grade)
 {
@@ -40,7 +41,7 @@ Bureaucrat::~Bureaucrat()
 	std::cout << "Bureaucrat " << name_ << " destructor called" << std::endl;
 }
 
-const std::string Bureaucrat::getName() const
+const std::string& Bureaucrat::getName() const
 {
 	return name_;
 }
