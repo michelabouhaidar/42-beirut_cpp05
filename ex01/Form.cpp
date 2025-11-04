@@ -18,9 +18,9 @@ Form::Form(const std::string& name, int signGrade, int executeGrade)
 {
 	std::cout << "Form " << name_ << " name constructor called" << std::endl;
 	if (signGrade_ < 1 || executeGrade_ < 1)
-		throw Bureaucrat::GradeTooHighException();
+		throw GradeTooHighException();
 	if (signGrade_ > 150 || executeGrade_ > 150)
-		throw Bureaucrat::GradeTooLowException();
+		throw GradeTooLowException();
 }
 
 Form::Form(const Form& obj)
